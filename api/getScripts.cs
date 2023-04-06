@@ -25,9 +25,13 @@ namespace BugWars
             dynamic data = JsonConvert.DeserializeObject(requestBody);
             name = name ?? data?.name;
 
-            string json = JsonConvert.SerializeObject(req);
+            string json = JsonConvert.SerializeObject(new HelloWorld());
 
             return new OkObjectResult(json);
         }
+    }
+
+    public class HelloWorld {
+        string name {get; set;} = "John DOe"
     }
 }
