@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <p> {{ message }}</p>
     <img alt="Vue logo" src="./assets/logo.png">
+    <p> Message from backend: {{ message }}</p>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
     };
   },
   async mounted() {
-    const { text } = await (await fetch("/api/message")).json();
+    const { text } = await (await fetch("/api/getScripts?name=Vue")).json();
     this.message = text;
   }
 }
