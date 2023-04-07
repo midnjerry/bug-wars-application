@@ -32,6 +32,6 @@ namespace BugWars
     }
 
     public class HelloWorld {
-        string name {get; set;} = "John DOe"
+        string name { get; set; } = "John DOe";
     }
 }
